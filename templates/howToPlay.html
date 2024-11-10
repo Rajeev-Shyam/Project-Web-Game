@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <p>This game is about a player running from destruction which is awaiting on the earth.</p>
+    <p>The player has to evade the holes which appear in front of him as hes running and there will be walls which can block him.</p>
+    <p>The player has to collect the yellow coins to gain score.</p>
+    <p>You can use the up,down,left and right key to move the player.</p>
+    <p>Try your best to not fall into the holes and you can also check if you are in the Leaderboards.</p>
+    <p>Thank you for playing!</p>
+
+    <p><a href="{{ url_for('blackhole') }}"><button>PLAY</button></a></p>
+
+{% endblock %}

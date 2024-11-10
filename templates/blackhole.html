@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>BLACKHOLE</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+        <script src="{{ url_for('static', filename='game_1.js') }}" type="module"></script>
+
+    </head>
+    <body>
+        {% if g.user %}
+            <p>User Id: {{ g.user}}
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </p>
+        {% endif %}
+        <div id="container">
+            <canvas width="300" height="550" ></canvas>
+        </div>
+        <p id="outcome"></p>
+        <p id="score"></p>
+        <p id="playAgainContainer">
+            <button id="playAgain">Play Again</button>
+        </p>
+        <p>
+            <a href="{{ url_for('index')}}">
+                <button>Home</button>
+              </a>
+        </p>
+    
+
+    </body>
+</html>

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+    {% if scoreboard %}
+            <table>
+                <caption>Leaderboards</caption>
+                <th>
+                    <tr>
+                        <th>Rank</th>
+                        <th>User ID</th>
+                        <th>Score</th>
+                    </tr>
+                </th>
+                {% for entry in scoreboard %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ entry[0] }}</td>
+                    <td>{{ entry[1] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+    {% endif %}
+    <p><a href="{{ url_for('index')}}">Home</a></p>
+
+{% endblock %}
